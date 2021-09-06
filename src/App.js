@@ -2,14 +2,18 @@ import { useEffect, useState } from "react";
 import Card from "./components/Card";
 import { apiDonations } from "./helpers/api";
 import { IconoApp } from "./helpers/IconoApp";
+import { Loader } from "./helpers/Loader";
 
 function App() {
   const [datosApi, setDatosApi] = useState([]);
   const [skip, setSkip] = useState(0);
+  const [mostarLoader, setMostarLoader] = useState(false);
   useEffect(() => {
+    setMostarLoader(true);
     (async () => {
       const datos = await apiDonations(skip);
       setDatosApi(datos);
+      setMostarLoader(false);
     })();
   }, [skip]);
 
@@ -31,10 +35,16 @@ function App() {
           </select>
         </div>
       </div>
-      {datosApi.map((donation) => (
-        <Card donation={donation} key={donation.first_name} />
-      ))}
-      <div className="grid grid-cols-2 gap-4 px-16 pb-10 sm:px-72">
+      {mostarLoader ? (
+        <div className="text-center h-96">
+          <Loader />
+        </div>
+      ) : (
+        datosApi.map((donation) => (
+          <Card donation={donation} key={donation.first_name} />
+        ))
+      )}
+      <div className="grid grid-cols-2 gap-4 px-16 pb-10 lg:px-72">
         {skip > 0 && (
           <button onClick={prev} className="py-2 border-2 border-button">
             Prev
