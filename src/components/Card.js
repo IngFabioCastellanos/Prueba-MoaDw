@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { IconArrowRight } from "../helpers/IconArrowRight";
 
 const Card = ({ donation }) => {
@@ -23,9 +24,9 @@ const Card = ({ donation }) => {
         <h2>{donation.donations}</h2>
       </div>
       <div className="flex justify-end col-span-2">
-        <button>
+        <Link to={`/donador/${donation.id}`}>
           <IconArrowRight />
-        </button>
+        </Link>
       </div>
     </div>
   );

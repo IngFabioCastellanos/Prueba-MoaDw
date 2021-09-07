@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-import Card from "./components/Card";
-import { apiDonations } from "./helpers/api";
-import { IconoApp } from "./helpers/IconoApp";
-import { Loader } from "./helpers/Loader";
+import Card from "../components/Card";
+import { apiDonations } from "../helpers/api";
+import { Loader } from "../helpers/Loader";
 
 function App() {
   const [datosApi, setDatosApi] = useState([]);
@@ -21,10 +20,7 @@ function App() {
   const prev = () => setSkip(skip - 3);
 
   return (
-    <div className="px-5 sm:px-14 lg:px-60 bg-gradient">
-      <div className="flex justify-center py-5 text-3xl text-white border-b-2 border-gradient">
-        <IconoApp />
-      </div>
+    <>
       <div className="sm:grid-cols-2 sm:grid sm:pt-12 sm:mb-2">
         <h1 className="mb-5 text-3xl font-extrabold text-center sm:mt-0 mt-7 color-title">
           Donations
@@ -54,7 +50,7 @@ function App() {
           Next
         </button>
       </div>
-    </div>
+    </>
   );
 }
 

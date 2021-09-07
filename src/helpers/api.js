@@ -7,3 +7,11 @@ export const apiDonations = async (inicio = 0) => {
   const datos = respuesta.json();
   return datos;
 };
+
+export const donadorPorID = async (id) => {
+  const url = `https://moadw-challenge.herokuapp.com/api/find-one?id=${id}`;
+
+  const respuesta = await fetch(url);
+  const datos = respuesta.json();
+  return datos;
+};
