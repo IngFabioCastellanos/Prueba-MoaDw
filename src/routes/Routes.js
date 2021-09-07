@@ -9,8 +9,8 @@ const Routes = () => {
       <Router>
         <Header />
         <Switch>
-          <Route path="/" component={App} exact />
-          <Route path="/donador/:id" component={DonadorView} />
+          <Route path="/donador/:id" exact component={DonadorView} />
+          <Route path="/" component={App} />
         </Switch>
       </Router>
     </div>

@@ -1,13 +1,18 @@
 import { useEffect, useState } from "react";
+import { useState as useStateHook } from "@hookstate/core";
+
 import Card from "../components/Card";
 import { apiDonations } from "../helpers/api";
 import { Loader } from "../helpers/Loader";
+import { mostarBoton } from "../helpers/store";
 
 function App() {
   const [datosApi, setDatosApi] = useState([]);
   const [skip, setSkip] = useState(0);
   const [mostarLoader, setMostarLoader] = useState(false);
+  const mostarBotonLeft = useStateHook(mostarBoton);
   useEffect(() => {
+    mostarBotonLeft.set(false);
     setMostarLoader(true);
     (async () => {
       const datos = await apiDonations(skip);
