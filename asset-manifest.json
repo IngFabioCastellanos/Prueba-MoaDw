@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Prueba-MoaDw/static/css/main.93b76d50.chunk.css",
-    "main.js": "/Prueba-MoaDw/static/js/main.ad4bd798.chunk.js",
-    "main.js.map": "/Prueba-MoaDw/static/js/main.ad4bd798.chunk.js.map",
+    "main.css": "/Prueba-MoaDw/static/css/main.f3259bcd.chunk.css",
+    "main.js": "/Prueba-MoaDw/static/js/main.eca1bdf0.chunk.js",
+    "main.js.map": "/Prueba-MoaDw/static/js/main.eca1bdf0.chunk.js.map",
     "runtime-main.js": "/Prueba-MoaDw/static/js/runtime-main.9c5a4af9.js",
     "runtime-main.js.map": "/Prueba-MoaDw/static/js/runtime-main.9c5a4af9.js.map",
     "static/js/2.398859de.chunk.js": "/Prueba-MoaDw/static/js/2.398859de.chunk.js",
     "static/js/2.398859de.chunk.js.map": "/Prueba-MoaDw/static/js/2.398859de.chunk.js.map",
     "index.html": "/Prueba-MoaDw/index.html",
-    "static/css/main.93b76d50.chunk.css.map": "/Prueba-MoaDw/static/css/main.93b76d50.chunk.css.map",
+    "static/css/main.f3259bcd.chunk.css.map": "/Prueba-MoaDw/static/css/main.f3259bcd.chunk.css.map",
     "static/js/2.398859de.chunk.js.LICENSE.txt": "/Prueba-MoaDw/static/js/2.398859de.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9c5a4af9.js",
     "static/js/2.398859de.chunk.js",
-    "static/css/main.93b76d50.chunk.css",
-    "static/js/main.ad4bd798.chunk.js"
+    "static/css/main.f3259bcd.chunk.css",
+    "static/js/main.eca1bdf0.chunk.js"
   ]
 }
