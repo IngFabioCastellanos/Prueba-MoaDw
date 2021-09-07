@@ -24,21 +24,21 @@ export const DonadorView = () => {
   return (
     <>
       {mostrarLoader ? (
-        <div className="mb-5">
+        <div>
           <div className="flex flex-col items-center px-10">
-            <h2 className="text-3xl font-extrabold text-center sm:mt-0 mt-7 color-title">
+            <h2 className="text-5xl font-extrabold text-center md:text-6xl sm:mt-0 pt-7 color-title">
               {datosDonador.first_name}
             </h2>
-            <h2 className="mb-5 text-3xl font-extrabold text-center sm:mt-0 color-title">
+            <h2 className="mb-5 text-5xl font-extrabold text-center md:text-6xl sm:mt-0 color-title">
               {datosDonador.last_name}
             </h2>
             <img
               src={datosDonador.image}
               alt={datosDonador.description}
               className="bg-purple-500 rounded-full "
-              width="150px"
+              width="250px"
             />
-            <p className="text-center text-white text-opacity-60 my-7">
+            <p className="text-xl text-center text-white md:text-3xl text-opacity-60 my-7">
               {datosDonador.description}
             </p>
           </div>
@@ -48,9 +48,11 @@ export const DonadorView = () => {
               total: datosDonador.total,
             }}
           />
-          <button className="p-2 text-white border rounded-xl">
-            MAKE DONATION
-          </button>
+          <div className="flex justify-center py-3">
+            <button className="w-full p-5 text-2xl font-extrabold border rounded-md border-button sm:w-1/2">
+              MAKE DONATION
+            </button>
+          </div>
         </div>
       ) : (
         <div className="text-center">
