@@ -27,7 +27,7 @@ function App() {
   return (
     <>
       <div className="sm:grid-cols-2 sm:grid sm:pt-12 sm:mb-2">
-        <h1 className="mb-5 text-3xl font-extrabold text-center sm:mt-0 mt-7 color-title">
+        <h1 className="mb-5 text-4xl font-bold text-center md:flex md:items-start sm:mt-0 mt-7 color-title md:text-6xl">
           Donations
         </h1>
         <div className="flex items-center justify-end">
@@ -47,11 +47,17 @@ function App() {
       )}
       <div className="grid grid-cols-2 gap-4 px-16 pb-10 lg:px-72">
         {skip > 0 && (
-          <button onClick={prev} className="py-2 border-2 border-button">
+          <button
+            onClick={prev}
+            className="py-2 font-extrabold border-2 border-button"
+          >
             Prev
           </button>
         )}
-        <button onClick={next} className="py-2 border-2 border-button">
+        <button
+          onClick={next}
+          className="py-2 font-extrabold border-2 border-button"
+        >
           Next
         </button>
       </div>

@@ -9,7 +9,7 @@ export const Header = () => {
   const history = useHistory();
   return (
     <div className="py-5 text-3xl border-b-2 border-gradient">
-      <div className="absolute flex justify-start">
+      <div className="absolute mt-3">
         {mostarBotonLeft.get() && (
           <button onClick={history.goBack}>
             <IconArrowLeft />

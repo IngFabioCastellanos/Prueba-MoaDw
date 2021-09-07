@@ -5,7 +5,7 @@ import { DonadorView } from "../views/DonadorView";
 
 const Routes = () => {
   return (
-    <div className="px-5 sm:px-14 lg:px-60 bg-gradient">
+    <div className="min-h-screen px-5 bg-black sm:px-14 lg:px-60">
       <Router>
         <Header />
         <Switch>
