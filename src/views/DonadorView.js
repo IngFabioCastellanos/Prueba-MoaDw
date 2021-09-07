@@ -4,6 +4,7 @@ import { donadorPorID } from "../helpers/api";
 import { Loader } from "../helpers/Loader";
 import { useState as useStateHook } from "@hookstate/core";
 import { mostarBoton } from "../helpers/store";
+import { CardTotalDonations } from "../components/CardTotalDonations";
 
 export const DonadorView = () => {
   const { id } = useParams();
@@ -20,12 +21,10 @@ export const DonadorView = () => {
     })();
   }, []);
 
-  console.log(datosDonador);
-
   return (
     <>
       {mostrarLoader ? (
-        <div>
+        <div className="mb-5">
           <div className="flex flex-col items-center px-10">
             <h2 className="text-3xl font-extrabold text-center sm:mt-0 mt-7 color-title">
               {datosDonador.first_name}
@@ -43,6 +42,15 @@ export const DonadorView = () => {
               {datosDonador.description}
             </p>
           </div>
+          <CardTotalDonations
+            props={{
+              donations: datosDonador.donations,
+              total: datosDonador.total,
+            }}
+          />
+          <button className="p-2 text-white border rounded-xl">
+            MAKE DONATION
+          </button>
         </div>
       ) : (
         <div className="text-center">
